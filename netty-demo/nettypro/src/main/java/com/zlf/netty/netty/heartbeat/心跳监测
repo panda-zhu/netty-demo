@@ -1,0 +1,8 @@
+/**
+ * int readerIdleTimeSeconds 表示多长时间没有读，就会发送一个心跳监测包监测是否连通
+ * int writerIdleTimeSeconds 表示多长时间没有写，就会发送一个心跳监测包监测是否连通
+ * int allIdleTimeSeconds 表示多长时间既没有读也没有写，就会发送一个心跳监测包监测是否连通
+ * 当IdleStateHandler触发后，就会传递给管道的下一个handler去处理
+ * 通过代用（触发）下一个handler的userEventTiggered，在该方法中取处理
+ */
+pipeline.addLast(new IdleStateHandler(3,5,7, TimeUnit.SECONDS));

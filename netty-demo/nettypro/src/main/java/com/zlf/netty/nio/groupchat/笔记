@@ -1,0 +1,6 @@
+1.啥时候seletor中 seletionKeys啥时候放入的值？
+2.key里有channel，通过channel就可以read和write buffer了
+3.有个bug  客户端转发还是不行
+
+
+
